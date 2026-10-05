@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { pool } from "@/lib/db";
+import { pool } from "../../../../lib/db";
 export async function POST(req: Request) {
  try { const b=await req.json(); const r=await pool.query("SELECT id,username,email,password_hash,age FROM users WHERE email=$1",[String(b.email||"").toLowerCase()]);
  if(!r.rowCount)return Response.json({error:"Invalid email or password."},{status:401});

@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";export async function GET(){return NextResponse.json({game:"Eko Lifestyle",status:"online",systems:["player","economy","jobs","bank","university","vehicles","property","business","police"],version:"0.2.0"})}

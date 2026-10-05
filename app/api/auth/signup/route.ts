@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto";
-import { pool } from "@/lib/db";
+import { pool } from "../../../../lib/db";
 import crypto from "crypto";
 export async function POST(req: Request) {
   try {
